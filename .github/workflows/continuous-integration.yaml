@@ -12,6 +12,11 @@ jobs:
   release:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+
     name: Create release
 
     steps:
