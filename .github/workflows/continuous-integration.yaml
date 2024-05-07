@@ -37,13 +37,22 @@ jobs:
     needs: release
 
     name: Push Docker image to Container Registry
+
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+      packages: write
+
+    defaults:
+      run:
+        shell: bash
+
     outputs:
       docker_image: ${{ steps.meta.outputs.tags }}
       release_name: ${{ env.RELEASE_NAME }}
-    permissions:
-      packages: write
-      contents: read
 
     steps:
       - name: Set env
@@ -72,6 +81,10 @@ jobs:
           images: |
             ghcr.io/${{ github.repository }}
 
+      - name: Generate Dockerfile 
+        run: | 
+          \cat ./Dockerfile.tpl | sed -E "s#_org_#${GITHUB_REPOSITORY_OWNER}#g" > ./Dockerfile
+
       - name: Build and push Docker images
         uses: docker/build-push-action@4a13e500e55cf31b7a5d59a38ab2040ab0f42f56
         with:
@@ -89,6 +102,12 @@ jobs:
     defaults:
       run:
         shell: bash
+
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+      packages: write
 
     container:
       image: ${{ needs.push_to_registry.outputs.docker_image }}
@@ -149,3 +168,4 @@ jobs:
           GITHUB_TOKEN=$GITHUB_TOKEN \
           RELEASE_NAME=$RELEASE_NAME \
           /bin/bash -c '. ./.github/workflows/release/publish-archive.sh'
+
