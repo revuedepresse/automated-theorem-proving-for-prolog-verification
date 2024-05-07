@@ -64,7 +64,7 @@ apply-provers: apply-vampire apply-e-theorem-prover
 
 start: apply-vampire apply-e-theorem-prover ### Apply both Vampire system and E Theorem Prover to conjectures and axioms in first-order form
 
-apply-provers-for-each-program:
+apply-provers-for-each-program: check-requirements
 ### Apply both Vampire system and E Theorem Prover to conjectures and axioms in first-order form for each program in ./src
 	. ./bin/start.sh && \
 	apply_prover_for_each_program_with_predefined_time_limits

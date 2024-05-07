@@ -3,13 +3,13 @@ set -Eeu
 
 # Add system user and group
 function add_system_user_group {
-  if [ $(cat /etc/group | grep "${PROGRAM_OWNER_GID}" -c) -eq 0 ]; then
+  if [ $(cat /etc/group | \grep "${PROGRAM_OWNER_GID}" -c) -eq 0 ]; then
     groupadd \
       --gid "${PROGRAM_OWNER_GID}" \
       service
   fi
 
-  if [ $(cat /etc/passwd | grep "${PROGRAM_OWNER_UID}" -c) -eq 0 ]; then
+  if [ $(cat /etc/passwd | \grep "${PROGRAM_OWNER_UID}" -c) -eq 0 ]; then
     useradd \
       --shell /usr/sbin/nologin \
       --uid ${PROGRAM_OWNER_UID} \

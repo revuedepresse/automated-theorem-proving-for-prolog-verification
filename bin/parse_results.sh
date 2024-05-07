@@ -66,11 +66,11 @@ function preserve_unique_fof_file_index_and_success_status {
   print_optionally '======= END: %s =========%s' "${time_limit}" $'\n'
 
   local how_many_matching_result_files
-  how_many_matching_result_files="$(ls -1 ./out/"${sub_directory}${file_prefix}"-all_*.out | grep --count '')"
+  how_many_matching_result_files="$(ls -1 ./out/"${sub_directory}${file_prefix}"-all_*.out | \grep --count '')"
 
   if ! guard_against_inconsistent_output_files_count "${how_many_matching_result_files}";
   then
-    print_utf8 'Executed command: `%s`%s' 'ls -1 ./out/'"${sub_directory}${file_prefix}"'-all_*.out | grep --count '"''" $'\n' 1>&2
+    print_utf8 'Executed command: `%s`%s' 'ls -1 ./out/'"${sub_directory}${file_prefix}"'-all_*.out | \grep --count '"''" $'\n' 1>&2
     return 1
   fi
 
@@ -176,8 +176,17 @@ function count_conjectures_to_prove {
 # Examples:
 #
 # ```shell
-# actual=$(combine_results './src/ackermann/ackermann-all.pl' 60 2> /dev/null);expected=33.33333333;message='combine_results'
-# actual=$(combine_results './src/gcd/gcd-all.pl' 60 2> /dev/null);expected=45.45454545;message='combine_results'
+# # actual=$(VERBOSE=1 combine_results './src/ackermann/ackermann-all.pl' 60 2> /dev/null);expected=33.33333333;message='combine_results'
+# # actual=$(VERBOSE=1 combine_results './src/ackermann/ackermann-all.pl' 10 2> /dev/null);expected=33.33333333;message='combine_results'
+# # actual=$(VERBOSE=1 combine_results './src/ackermann/ackermann-all.pl' 1 2> /dev/null);expected=33.33333333;message='combine_results'
+# # actual=$(VERBOSE=1 combine_results './src/gcd/gcd-all.pl' 60 2> /dev/null);expected=45.45454545;message='combine_results'
+# # actual=$(VERBOSE=1 combine_results './src/gcd/gcd-all.pl' 10 2> /dev/null);expected=45.45454545;message='combine_results'
+# # actual=$(VERBOSE=1 combine_results './src/gcd/gcd-all.pl' 1 2> /dev/null);expected=45.45454545;message='combine_results'
+# # actual=$(VERBOSE=1 combine_results './src/sort/sort-all.pl' 60 2> /dev/null);expected=61.90476190;message='combine_results'
+# # actual=$(VERBOSE=1 combine_results './src/sort/sort-all.pl' 10 2> /dev/null);expected=59.52380952;message='combine_results'
+# # actual=$(VERBOSE=1 combine_results './src/nat/nat-all.pl' 60 2> /dev/null);expected=82.41758241;message='combine_results'
+# # actual=$(VERBOSE=1 combine_results './src/nat/nat-all.pl' 10 2> /dev/null);expected=82.41758241;message='combine_results'
+# # actual=$(VERBOSE=1 combine_results './src/taut/taut-all.pl' 1 2> /dev/null);expected=69.76744186;message='combine_results'
 # ```
 function combine_results {
   local logic_program

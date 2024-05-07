@@ -16,7 +16,7 @@ services:
       timeout: 10s
       retries: 3
       start_period: 1m
-      test: ["CMD", "/bin/bash", "-c", "( test $(ps ax | grep -E 'tini' -c) -gt 0 )"]
+      test: ["CMD", "/bin/bash", "-c", "( test $(ps ax | \grep -E 'tini' -c) -gt 0 )"]
     labels:
       org.opencontainers.image.source: 'https://github.com/atp-lptp/automated-theorem-proving-for-prolog-verification'
     restart:  'always'

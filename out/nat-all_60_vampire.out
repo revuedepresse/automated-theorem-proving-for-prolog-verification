@@ -27,13 +27,13 @@ target conjecture: "./src/nat/nat-all26.fof" apply prover command: "vampire --pr
 target conjecture: "./src/nat/nat-all27.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all27.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all28.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all28.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all29.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all29.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
-target conjecture: "./src/nat/nat-all30.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all30.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
+target conjecture: "./src/nat/nat-all30.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all30.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/nat/nat-all31.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all31.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all32.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all32.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/nat/nat-all33.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all33.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/nat/nat-all34.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all34.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all35.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all35.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
-target conjecture: "./src/nat/nat-all36.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all36.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
+target conjecture: "./src/nat/nat-all36.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all36.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/nat/nat-all37.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all37.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all38.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all38.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all39.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all39.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
@@ -89,4 +89,4 @@ target conjecture: "./src/nat/nat-all88.fof" apply prover command: "vampire --pr
 target conjecture: "./src/nat/nat-all89.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all89.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/nat/nat-all90.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all90.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/nat/nat-all91.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/nat/nat-all91.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
-91 lemmas, 74 proved,  ratio: 81.31868131868131
+91 lemmas, 72 proved,  ratio: 79.12087912087912
