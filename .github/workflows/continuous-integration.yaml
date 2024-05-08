@@ -137,9 +137,9 @@ jobs:
           echo 'release '$RELEASE_NAME
           make build-fof-for-each-program
 
-      #- name: Applying provers on FOF files for all programs available in ./src
-      #  working-directory: /usr/local/atp-prolog-verification
-      #  run: make apply-provers-for-each-program
+      - name: Applying provers on FOF files for all programs available in ./src
+        working-directory: /usr/local/atp-prolog-verification
+        run: make apply-provers-for-each-program
 
       - name: Parse results
         working-directory: /usr/local/atp-prolog-verification
