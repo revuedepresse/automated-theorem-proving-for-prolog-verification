@@ -161,4 +161,3 @@ jobs:
           GITHUB_TOKEN=$GITHUB_TOKEN \
           RELEASE_NAME=$RELEASE_NAME \
           /bin/bash -c '. ./.github/workflows/release/publish-archive.sh'
-

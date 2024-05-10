@@ -163,16 +163,45 @@ function install_entrypoint() {
 # - configure bc
 # - clean up
 function install_requirements {
-  add_system_user_group || printf '%s.%s' 'Could not add system user group' $'\n' 1>&2
-  update_package_manager || printf '%s.%s' 'Could not update package manager' $'\n' 1>&2
-  configure_bc || printf '%s.%s' 'Could not configure bc' $'\n' 1>&2
-  install_required_packages || printf '%s.%s' 'Could not install required packages' $'\n' 1>&2
-  install_tini || printf '%s.%s' 'Could not install tini' $'\n' 1>&2
-  install_swi_prolog || printf '%s.%s' 'Could not install SWI-Prolog' $'\n' 1>&2
-  install_vampire || printf '%s.%s' 'Could not install vampire system' $'\n' 1>&2
-  install_e_prover || printf '%s.%s' 'Could not install E Theorem Prover' $'\n' 1>&2
-  install_entrypoint || printf '%s.%s' 'Could not install container entrypoint' $'\n' 1>&2
-  clear_package_management_system_cache || printf '%s.%s' 'Could not clean up' $'\n' 1>&2
+  ( add_system_user_group && \
+  printf '%s.%s' 'Add system user group' $'\n' ) || \
+    printf '%s.%s' 'Could not add system user group' $'\n' 1>&2
+
+  ( update_package_manager && \
+  printf '%s.%s' 'Update package manager' $'\n' ) || printf \
+    '%s.%s' 'Could not update package manager' $'\n' 1>&2
+
+  ( configure_bc && \
+  printf '%s.%s' 'Configure bc' $'\n' ) || printf '%\
+    s.%s' 'Could not configure bc' $'\n' 1>&2
+
+  ( install_required_packages && \
+  printf '%s.%s' 'Install required packages' $'\n' ) || printf \
+    '%s.%s' 'Could not install required packages' $'\n' 1>&2
+
+  ( install_tini && \
+  printf '%s.%s' 'Install tini' $'\n' ) || printf '%\
+    s.%s' 'Could not install tini' $'\n' 1>&2
+
+  ( install_swi_prolog && \
+  printf '%s.%s' 'Install SWI-Prolog' $'\n' ) || \
+    printf '%s.%s' 'Could not install SWI-Prolog' $'\n' 1>&2
+
+  ( install_vampire && \
+  printf '%s.%s' 'Install vampire system' $'\n' ) || printf \
+    '%s.%s' 'Could not install vampire system' $'\n' 1>&2
+
+  ( install_e_prover && \
+  printf '%s.%s' 'Install E Theorem Prover' $'\n' ) || \
+    printf '%s.%s' 'Could not install E Theorem Prover' $'\n' 1>&2
+
+  ( install_entrypoint && \
+  printf '%s.%s' 'Install container entrypoint' $'\n' ) || printf \
+    '%s.%s' 'Could not install container entrypoint' $'\n' 1>&2
+
+  ( clear_package_management_system_cache && \
+  printf '%s.%s' 'Clean up' $'\n' ) || printf '%\
+    s.%s' 'Could not clean up' $'\n' 1>&2
 }
 
 # Build prover image by running [docker compose](https://docs.docker.com/get-docker/) command
