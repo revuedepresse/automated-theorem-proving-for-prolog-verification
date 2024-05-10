@@ -12,7 +12,7 @@ target conjecture: "./src/reverse/reverse-all11.fof" apply prover command: "vamp
 target conjecture: "./src/reverse/reverse-all12.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all12.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/reverse/reverse-all13.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all13.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/reverse/reverse-all14.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all14.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
-target conjecture: "./src/reverse/reverse-all15.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all15.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
+target conjecture: "./src/reverse/reverse-all15.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all15.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/reverse/reverse-all16.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all16.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/reverse/reverse-all17.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all17.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/reverse/reverse-all18.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all18.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
@@ -23,4 +23,4 @@ target conjecture: "./src/reverse/reverse-all22.fof" apply prover command: "vamp
 target conjecture: "./src/reverse/reverse-all23.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all23.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/reverse/reverse-all24.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all24.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/reverse/reverse-all25.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all25.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
-25 lemmas, 18 proved,  ratio: 72
+25 lemmas, 19 proved,  ratio: 76

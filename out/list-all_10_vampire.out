@@ -49,7 +49,7 @@ target conjecture: "./src/list/list-all48.fof" apply prover command: "vampire --
 target conjecture: "./src/list/list-all49.fof" apply prover command: "vampire --proof off --time_limit 10s ./src/list/list-all49.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/list/list-all50.fof" apply prover command: "vampire --proof off --time_limit 10s ./src/list/list-all50.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/list/list-all51.fof" apply prover command: "vampire --proof off --time_limit 10s ./src/list/list-all51.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
-target conjecture: "./src/list/list-all52.fof" apply prover command: "vampire --proof off --time_limit 10s ./src/list/list-all52.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
+target conjecture: "./src/list/list-all52.fof" apply prover command: "vampire --proof off --time_limit 10s ./src/list/list-all52.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/list/list-all53.fof" apply prover command: "vampire --proof off --time_limit 10s ./src/list/list-all53.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/list/list-all54.fof" apply prover command: "vampire --proof off --time_limit 10s ./src/list/list-all54.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/list/list-all55.fof" apply prover command: "vampire --proof off --time_limit 10s ./src/list/list-all55.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
@@ -82,4 +82,4 @@ target conjecture: "./src/list/list-all81.fof" apply prover command: "vampire --
 target conjecture: "./src/list/list-all82.fof" apply prover command: "vampire --proof off --time_limit 10s ./src/list/list-all82.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/list/list-all83.fof" apply prover command: "vampire --proof off --time_limit 10s ./src/list/list-all83.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/list/list-all84.fof" apply prover command: "vampire --proof off --time_limit 10s ./src/list/list-all84.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
-84 lemmas, 75 proved,  ratio: 89.28571428571429
+84 lemmas, 76 proved,  ratio: 90.47619047619048

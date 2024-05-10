@@ -31,7 +31,7 @@ target conjecture: "./src/nat/nat-all30.fof" apply prover command: "eprover --au
 target conjecture: "./src/nat/nat-all31.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all31.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all32.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all32.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/nat/nat-all33.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all33.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
-target conjecture: "./src/nat/nat-all34.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all34.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
+target conjecture: "./src/nat/nat-all34.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all34.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all35.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all35.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/nat/nat-all36.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all36.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/nat/nat-all37.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all37.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
@@ -42,7 +42,7 @@ target conjecture: "./src/nat/nat-all41.fof" apply prover command: "eprover --au
 target conjecture: "./src/nat/nat-all42.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all42.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all43.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all43.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all44.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all44.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
-target conjecture: "./src/nat/nat-all45.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all45.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
+target conjecture: "./src/nat/nat-all45.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all45.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/nat/nat-all46.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all46.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all47.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all47.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/nat/nat-all48.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all48.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
@@ -56,7 +56,7 @@ target conjecture: "./src/nat/nat-all55.fof" apply prover command: "eprover --au
 target conjecture: "./src/nat/nat-all56.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all56.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/nat/nat-all57.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all57.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all58.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all58.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
-target conjecture: "./src/nat/nat-all59.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all59.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
+target conjecture: "./src/nat/nat-all59.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all59.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all60.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all60.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all61.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all61.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all62.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all62.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
@@ -89,4 +89,4 @@ target conjecture: "./src/nat/nat-all88.fof" apply prover command: "eprover --au
 target conjecture: "./src/nat/nat-all89.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all89.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/nat/nat-all90.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all90.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/nat/nat-all91.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/nat/nat-all91.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
-91 lemmas, 54 proved,  ratio: 59.34065934065934
+91 lemmas, 55 proved,  ratio: 60.43956043956044
