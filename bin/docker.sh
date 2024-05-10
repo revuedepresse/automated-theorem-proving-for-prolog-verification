@@ -216,6 +216,7 @@ function build_prover_image {
     docker compose \
     -f ./etc/docker-compose.yaml \
     build \
+    --no-cache \
     --build-arg OWNER_UID="${PROGRAM_OWNER_UID}" \
     --build-arg OWNER_GID="${PROGRAM_OWNER_UID}" \
     prolog-verification
