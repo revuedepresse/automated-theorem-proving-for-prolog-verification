@@ -12,6 +12,11 @@ jobs:
   release:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+
     name: Create release
 
     steps:
@@ -32,13 +37,18 @@ jobs:
     needs: release
 
     name: Push Docker image to Container Registry
+
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+      packages: write
+
     outputs:
       docker_image: ${{ steps.meta.outputs.tags }}
       release_name: ${{ env.RELEASE_NAME }}
-    permissions:
-      packages: write
-      contents: read
 
     steps:
       - name: Set env
@@ -67,6 +77,10 @@ jobs:
           images: |
             ghcr.io/${{ github.repository }}
 
+      - name: Generate Dockerfile 
+        run: | 
+          \cat ./Dockerfile.tpl | sed -E "s#_org_#${GITHUB_REPOSITORY_OWNER}#g" > ./Dockerfile
+
       - name: Build and push Docker images
         uses: docker/build-push-action@4a13e500e55cf31b7a5d59a38ab2040ab0f42f56
         with:
@@ -78,12 +92,15 @@ jobs:
   build-fof_apply-provers:
     needs: push_to_registry
 
+    runs-on: ubuntu-latest
+
     name: Build FOF files, apply provers, parse results
 
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+      packages: write
 
     container:
       image: ${{ needs.push_to_registry.outputs.docker_image }}
@@ -103,19 +120,19 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
+#      - name: Make FOF files
+#        working-directory: /usr/local/atp-prolog-verification
+#        run: |
+#          echo 'release '$RELEASE_NAME
+#          make build-fof-for-each-program
+
       - name: Run tests
         working-directory: /usr/local/atp-prolog-verification
         run: make test
 
-      - name: Make FOF files
+      - name: Applying provers on FOF files for all programs available in ./src
         working-directory: /usr/local/atp-prolog-verification
-        run: |
-          echo 'release '$RELEASE_NAME
-          make build-fof-for-each-program
-
-      #- name: Applying provers on FOF files for all programs available in ./src
-      #  working-directory: /usr/local/atp-prolog-verification
-      #  run: make apply-provers-for-each-program
+        run: make apply-provers-for-each-program
 
       - name: Parse results
         working-directory: /usr/local/atp-prolog-verification

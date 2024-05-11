@@ -10,14 +10,8 @@ services:
         - OWNER_UID=${PROGRAM_OWNER_UID:-1000}
         - OWNER_GID=${PROGRAM_OWNER_GID:-1000}
       tags:
-        - "ghcr.io/atp-lptp/automated-theorem-proving-for-prolog-verification:base"
-    healthcheck:
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 1m
-      test: ["CMD", "/bin/bash", "-c", "( test $(ps ax | grep -E 'tini' -c) -gt 0 )"]
+        - "ghcr.io/revuedepresse/automated-theorem-proving-for-prolog-verification:base"
     labels:
-      org.opencontainers.image.source: 'https://github.com/atp-lptp/automated-theorem-proving-for-prolog-verification'
+      org.opencontainers.image.source: 'https://github.com/revuedepresse/automated-theorem-proving-for-prolog-verification'
     restart:  'always'
     platform: 'linux/amd64'

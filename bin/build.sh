@@ -25,32 +25,32 @@ set -Eeu
 # Examples:
 #
 # ```
-# actual=$(ls -1 './src/gcd/gcd-all'*.fof 2> /dev/null | grep --count '');expected=11;message='build_fof'
-# actual=$(ls -1 './src/int/int-all'*.fof 2> /dev/null | grep --count '');expected=67;message='build_fof'
-# actual=$(ls -1 './src/nat/nat-all'*.fof 2> /dev/null | grep --count '');expected=91;message='build_fof'
-# actual=$(\cat ./src/nat/*all1.fof | grep "('lemma" -c);expected=1;message='build_fof'
-# actual=$(\cat ./src/nat/*all1.fof | grep ' =>' | grep ' s(' | grep -v 'succeeds\|terminates' | grep -c ' = ');expected=1;message='build_fof__axiom_1_clark_equality_theory'
-# actual=$(\cat ./src/nat/*all1.fof | grep ' = ' | grep '~ \|]: ~' | grep -cv 'succeeds\|terminates\|fails');expected=6;message='build_fof__axiom_2_clark_equality_theory'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'gr(' | grep -cv '<=>');expected=2;message='build_fof__axiom_4_gr_axioms_constant'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'gr(' | grep -c '<=>');expected=2;message='build_fof__axiom_5_gr_m_ary_functions'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'succeeds' | grep 'fails' | grep '&' | grep -c ': ~');expected=6;message='build_fof__axiom_6_uniqueness_axiom'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'succeeds' | grep 'fails' | grep '&' | grep ': ~' | grep -c '@<');expected=1;message='build_fof__axiom_6_uniqueness_axiom'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'succeeds' | grep 'fails' | grep '&' | grep ': ~' | grep -c '@=<');expected=1;message='build_fof__axiom_6_uniqueness_axiom'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'succeeds' | grep 'fails' | grep '&' | grep ': ~' | grep -c 'nat_succeeds');expected=1;message='build_fof__axiom_6_uniqueness_axiom'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'succeeds' | grep 'fails' | grep '&' | grep ': ~' | grep -c 'nat_list');expected=1;message='build_fof__axiom_6_uniqueness_axiom'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'succeeds' | grep 'fails' | grep '&' | grep ': ~' | grep -c 'plus_');expected=1;message='build_fof__axiom_6_uniqueness_axiom'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'succeeds' | grep 'fails' | grep '&' | grep ': ~' | grep -c 'times_');expected=1;message='build_fof__axiom_6_uniqueness_axiom'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'terminates' | grep ' => ' | \grep '@<_succeeds' | grep -c fails);expected=1;message='build_fof__axiom_7_totality_axiom'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'terminates' | grep ' => ' | \grep '@=<_succeeds' | grep -c fails);expected=1;message='build_fof__axiom_7_totality_axiom'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'terminates' | grep ' => ' | \grep 'nat_succeeds' | grep -c fails);expected=1;message='build_fof__axiom_7_totality_axiom'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'terminates' | grep ' => ' | \grep 'nat_list_succeeds' | grep -c fails);expected=1;message='build_fof__axiom_7_totality_axiom'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'terminates' | grep ' => ' | \grep 'plus_succeeds' | grep -c fails);expected=1;message='build_fof__axiom_7_totality_axiom'
-# actual=$(\cat ./src/nat/*all1.fof | grep 'terminates' | grep ' => ' | \grep 'times_succeeds' | grep -c fails);expected=1;message='build_fof__axiom_7_totality_axiom'
-# actual=$(\cat ./src/nat/*all1.fof | grep '<=>' | grep 'fails' | grep '[0-9]\+,axiom' | grep -cv terminates);expected=6;message='build_fof__axiom_8_fixed_point_axiom_for_user_defined_predicate_fails'
-# actual=$(\cat ./src/nat/*all1.fof | grep '<=>' | grep 'succeeds' | grep -c '[0-9]\+,axiom');expected=6;message='build_fof__axiom_8_fixed_point_axiom_for_user_defined_predicate_succeeds'
-# actual=$(\cat ./src/nat/*all1.fof | grep '<=>' | grep 'terminates' | grep -c '[0-9]\+,axiom');expected=6;message='build_fof__axiom_8_fixed_point_axiom_for_user_defined_predicate_terminates'
-# actual=$(\cat ./src/nat/*all1.fof | grep '(induction' -c);expected=1;message='build_fof__axiom_9_induction_schema_for_user_defined_predicate'
-# actual=$(\cat ./src/nat/*all91.fof | grep 'corollary\|lemma\|theorem' | grep axiom -c);expected=90;message='build_fof__assumptions_from_previous_conjectures'
+# actual=$(ls -1 './src/gcd/gcd-all'*.fof 2> /dev/null | \grep --count '');expected=11;message='build_fof'
+# actual=$(ls -1 './src/int/int-all'*.fof 2> /dev/null | \grep --count '');expected=67;message='build_fof'
+# actual=$(ls -1 './src/nat/nat-all'*.fof 2> /dev/null | \grep --count '');expected=91;message='build_fof'
+# actual=$(\cat ./src/nat/*all1.fof | \grep "('lemma" -c);expected=1;message='build_fof'
+# actual=$(\cat ./src/nat/*all1.fof | \grep ' =>' | \grep ' s(' | \grep -v 'succeeds\|terminates' | \grep -c ' = ');expected=1;message='build_fof__axiom_1_clark_equality_theory'
+# actual=$(\cat ./src/nat/*all1.fof | \grep ' = ' | \grep '~ \|]: ~' | \grep -cv 'succeeds\|terminates\|fails');expected=6;message='build_fof__axiom_2_clark_equality_theory'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'gr(' | \grep -cv '<=>');expected=2;message='build_fof__axiom_4_gr_axioms_constant'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'gr(' | \grep -c '<=>');expected=2;message='build_fof__axiom_5_gr_m_ary_functions'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'succeeds' | \grep 'fails' | \grep '&' | \grep -c ': ~');expected=6;message='build_fof__axiom_6_uniqueness_axiom'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'succeeds' | \grep 'fails' | \grep '&' | \grep ': ~' | \grep -c '@<');expected=1;message='build_fof__axiom_6_uniqueness_axiom'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'succeeds' | \grep 'fails' | \grep '&' | \grep ': ~' | \grep -c '@=<');expected=1;message='build_fof__axiom_6_uniqueness_axiom'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'succeeds' | \grep 'fails' | \grep '&' | \grep ': ~' | \grep -c 'nat_succeeds');expected=1;message='build_fof__axiom_6_uniqueness_axiom'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'succeeds' | \grep 'fails' | \grep '&' | \grep ': ~' | \grep -c 'nat_list');expected=1;message='build_fof__axiom_6_uniqueness_axiom'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'succeeds' | \grep 'fails' | \grep '&' | \grep ': ~' | \grep -c 'plus_');expected=1;message='build_fof__axiom_6_uniqueness_axiom'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'succeeds' | \grep 'fails' | \grep '&' | \grep ': ~' | \grep -c 'times_');expected=1;message='build_fof__axiom_6_uniqueness_axiom'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'terminates' | \grep ' => ' | \grep '@<_succeeds' | \grep -c fails);expected=1;message='build_fof__axiom_7_totality_axiom'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'terminates' | \grep ' => ' | \grep '@=<_succeeds' | \grep -c fails);expected=1;message='build_fof__axiom_7_totality_axiom'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'terminates' | \grep ' => ' | \grep 'nat_succeeds' | \grep -c fails);expected=1;message='build_fof__axiom_7_totality_axiom'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'terminates' | \grep ' => ' | \grep 'nat_list_succeeds' | \grep -c fails);expected=1;message='build_fof__axiom_7_totality_axiom'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'terminates' | \grep ' => ' | \grep 'plus_succeeds' | \grep -c fails);expected=1;message='build_fof__axiom_7_totality_axiom'
+# actual=$(\cat ./src/nat/*all1.fof | \grep 'terminates' | \grep ' => ' | \grep 'times_succeeds' | \grep -c fails);expected=1;message='build_fof__axiom_7_totality_axiom'
+# actual=$(\cat ./src/nat/*all1.fof | \grep '<=>' | \grep 'fails' | \grep '[0-9]\+,axiom' | \grep -cv terminates);expected=6;message='build_fof__axiom_8_fixed_point_axiom_for_user_defined_predicate_fails'
+# actual=$(\cat ./src/nat/*all1.fof | \grep '<=>' | \grep 'succeeds' | \grep -c '[0-9]\+,axiom');expected=6;message='build_fof__axiom_8_fixed_point_axiom_for_user_defined_predicate_succeeds'
+# actual=$(\cat ./src/nat/*all1.fof | \grep '<=>' | \grep 'terminates' | \grep -c '[0-9]\+,axiom');expected=6;message='build_fof__axiom_8_fixed_point_axiom_for_user_defined_predicate_terminates'
+# actual=$(\cat ./src/nat/*all1.fof | \grep '(induction' -c);expected=1;message='build_fof__axiom_9_induction_schema_for_user_defined_predicate'
+# actual=$(\cat ./src/nat/*all91.fof | \grep 'corollary\|lemma\|theorem' | \grep axiom -c);expected=90;message='build_fof__assumptions_from_previous_conjectures'
 # ```
 function build_fof {
     local logic_program
@@ -152,7 +152,7 @@ function run_tests {
     bash -c '. ./bin/test.sh'
 
     local failures
-    failures=$(bash -c '. ./bin/test.sh' 2>&1 | grep 'FAILURE:' -c)
+    failures=$(bash -c '. ./bin/test.sh' 2>&1 | \grep 'FAILURE:' -c)
 
     if [ ${failures} -eq 0 ]; then
         echo 'All tests passed.'

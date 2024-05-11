@@ -22,11 +22,11 @@ target conjecture: "./src/suffix/suffix-all21.fof" apply prover command: "eprove
 target conjecture: "./src/suffix/suffix-all22.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/suffix/suffix-all22.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/suffix/suffix-all23.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/suffix/suffix-all23.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/suffix/suffix-all24.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/suffix/suffix-all24.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
-target conjecture: "./src/suffix/suffix-all25.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/suffix/suffix-all25.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
+target conjecture: "./src/suffix/suffix-all25.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/suffix/suffix-all25.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/suffix/suffix-all26.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/suffix/suffix-all26.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/suffix/suffix-all27.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/suffix/suffix-all27.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/suffix/suffix-all28.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/suffix/suffix-all28.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/suffix/suffix-all29.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/suffix/suffix-all29.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
-target conjecture: "./src/suffix/suffix-all30.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/suffix/suffix-all30.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
+target conjecture: "./src/suffix/suffix-all30.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/suffix/suffix-all30.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/suffix/suffix-all31.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/suffix/suffix-all31.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
-31 lemmas, 25 proved,  ratio: 80.64516129032258
+31 lemmas, 23 proved,  ratio: 74.19354838709677

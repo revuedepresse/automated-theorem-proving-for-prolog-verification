@@ -125,7 +125,7 @@ function guard_against_incomplete_fof_file {
   fi
 
   local target_extension_occurrences
-  target_extension_occurrences=$(echo "${logic_program}" | grep --count '\-all.pl')
+  target_extension_occurrences=$(echo "${logic_program}" | \grep --count '\-all.pl')
 
   if [ ${target_extension_occurrences} -eq 0 ];
   then
@@ -253,9 +253,9 @@ function guard_against_missing_placeholder_in_proof_file {
 #
 # Example:
 # ```shell
-# actual=$(PATH= check_requirements './src/nat/nat.pl' 2>> /dev/null | grep -c 'bash');expected=1;message='check_requirements'
-# actual=$(PATH= check_requirements './src/nat/nat.pl' 2>> /dev/null | grep -c 'Vampire');expected=1;message='check_requirements'
-# actual=$(PATH= check_requirements './src/nat/nat.pl' 2>> /dev/null | grep -c 'E Theorem Prover');expected=1;message='check_requirements'
+# actual=$(PATH= check_requirements './src/nat/nat.pl' 2>> /dev/null | \grep -c 'bash');expected=1;message='check_requirements'
+# actual=$(PATH= check_requirements './src/nat/nat.pl' 2>> /dev/null | \grep -c 'Vampire');expected=1;message='check_requirements'
+# actual=$(PATH= check_requirements './src/nat/nat.pl' 2>> /dev/null | \grep -c 'E Theorem Prover');expected=1;message='check_requirements'
 # ```
 function check_requirements {
   local logic_program

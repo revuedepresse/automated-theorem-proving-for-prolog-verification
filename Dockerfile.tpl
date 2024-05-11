@@ -1,8 +1,8 @@
-FROM        ghcr.io/atp-lptp/automated-theorem-proving-for-prolog-verification:base
+FROM        ghcr.io/_org_/automated-theorem-proving-for-prolog-verification:base
 
 LABEL       maintainer="Thierry Marianne <thierry.marianne@univ-reunion.fr>"
 
-LABEL       org.opencontainers.image.source="https://github.com/atp-lptp/automated-theorem-proving-for-prolog-verification"
+LABEL       org.opencontainers.image.source="https://github.com/_org_/automated-theorem-proving-for-prolog-verification"
 
 COPY        --chown=1001:1001 \
             ./ \

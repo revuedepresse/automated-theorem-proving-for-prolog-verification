@@ -1,5 +1,5 @@
 target conjecture: "./src/reverse/reverse-all1.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all1.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
-target conjecture: "./src/reverse/reverse-all2.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all2.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
+target conjecture: "./src/reverse/reverse-all2.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all2.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/reverse/reverse-all3.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all3.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/reverse/reverse-all4.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all4.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/reverse/reverse-all5.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all5.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
@@ -23,4 +23,4 @@ target conjecture: "./src/reverse/reverse-all22.fof" apply prover command: "vamp
 target conjecture: "./src/reverse/reverse-all23.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all23.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/reverse/reverse-all24.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all24.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/reverse/reverse-all25.fof" apply prover command: "vampire --proof off --time_limit 1s ./src/reverse/reverse-all25.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
-25 lemmas, 18 proved,  ratio: 72
+25 lemmas, 17 proved,  ratio: 68

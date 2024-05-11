@@ -100,7 +100,7 @@ function apply_prover {
     local prove_cmd
     prove_cmd="$(print_utf8 '%s swipl -s ./src/prove.pl -g "%s"%s' "$(which env)" "${goal_argument}" $'\n')"
 
-    bash -c "${prove_cmd}" 2>&1 | grep 'command:\|ratio' | \
+    bash -c "${prove_cmd}" 2>&1 | \grep 'command:\|ratio' | \
     sed -E 's#'"$(which vampire)"'#vampire#' | \
     sed -E 's#'"$(which eprover)"'#eprover#'
   )

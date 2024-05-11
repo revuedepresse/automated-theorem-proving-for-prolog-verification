@@ -8,7 +8,7 @@ target conjecture: "./src/int/int-all7.fof" apply prover command: "eprover --aut
 target conjecture: "./src/int/int-all8.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/int/int-all8.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/int/int-all9.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/int/int-all9.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/int/int-all10.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/int/int-all10.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
-target conjecture: "./src/int/int-all11.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/int/int-all11.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
+target conjecture: "./src/int/int-all11.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/int/int-all11.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/int/int-all12.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/int/int-all12.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/int/int-all13.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/int/int-all13.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/int/int-all14.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/int/int-all14.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
@@ -65,4 +65,4 @@ target conjecture: "./src/int/int-all64.fof" apply prover command: "eprover --au
 target conjecture: "./src/int/int-all65.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/int/int-all65.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/int/int-all66.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/int/int-all66.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/int/int-all67.fof" apply prover command: "eprover --auto --cpu-limit=10 -s ./src/int/int-all67.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
-67 lemmas, 45 proved,  ratio: 67.16417910447761
+67 lemmas, 44 proved,  ratio: 65.67164179104478

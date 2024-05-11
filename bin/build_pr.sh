@@ -63,7 +63,7 @@ function list_assumptions {
     export SOURCE_FILE="${proof_file}"
     $(which swipl) -s ./bin/build_pr.pl -g 'list_assumptions.'
 
-    for req in $(list_requirements "${logic_program}" "${exclusion_pattern}" | grep -vE '\.gr$' | from_gr_thm_to_pl | sort | uniq);
+    for req in $(list_requirements "${logic_program}" "${exclusion_pattern}" | \grep -vE '\.gr$' | from_gr_thm_to_pl | sort | uniq);
     do
       list_assumptions "${req}" "${exclusion_pattern}" | sed -E 's#:th,#,#g' | sed -E 's#:lm,#,#g' | sed -E 's#:co,#,#g'
       exclusion_pattern="${exclusion_pattern}|/$(without_pl_suffix "${req}")\)"
@@ -167,7 +167,7 @@ function build_pr {
       {
         before_placeholder "${logic_program}"
         (
-          for req in $(list_requirements "${logic_program}" "${exclusion_pattern}" | grep -vE '\.gr$' | from_gr_thm_to_pl | sort | uniq);
+          for req in $(list_requirements "${logic_program}" "${exclusion_pattern}" | \grep -vE '\.gr$' | from_gr_thm_to_pl | sort | uniq);
           do
             list_assumptions "${req}" "${exclusion_pattern}" | sed -E 's#:th,#,#g' | sed -E 's#:lm,#,#g' | sed -E 's#:co,#,#g'
             exclusion_pattern="${exclusion_pattern}|/$(without_pl_suffix "${req}")\)"
