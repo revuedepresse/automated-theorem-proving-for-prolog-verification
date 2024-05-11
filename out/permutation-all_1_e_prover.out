@@ -1,4 +1,4 @@
-target conjecture: "./src/permutation/permutation-all1.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/permutation/permutation-all1.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
+target conjecture: "./src/permutation/permutation-all1.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/permutation/permutation-all1.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/permutation/permutation-all2.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/permutation/permutation-all2.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/permutation/permutation-all3.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/permutation/permutation-all3.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/permutation/permutation-all4.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/permutation/permutation-all4.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
@@ -40,4 +40,4 @@ target conjecture: "./src/permutation/permutation-all39.fof" apply prover comman
 target conjecture: "./src/permutation/permutation-all40.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/permutation/permutation-all40.fof >> $(pwd)/out/tmp_output_e_prover" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/permutation/permutation-all41.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/permutation/permutation-all41.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/permutation/permutation-all42.fof" apply prover command: "eprover --auto --cpu-limit=1 -s ./src/permutation/permutation-all42.fof >> $(pwd)/out/tmp_output_e_prover" status code: "7", successful application (yes: 1, no: 0): 0
-42 lemmas, 18 proved,  ratio: 42.857142857142854
+42 lemmas, 19 proved,  ratio: 45.23809523809524

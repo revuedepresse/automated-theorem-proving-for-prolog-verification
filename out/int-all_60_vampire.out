@@ -44,7 +44,7 @@ target conjecture: "./src/int/int-all43.fof" apply prover command: "vampire --pr
 target conjecture: "./src/int/int-all44.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/int/int-all44.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/int/int-all45.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/int/int-all45.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/int/int-all46.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/int/int-all46.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
-target conjecture: "./src/int/int-all47.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/int/int-all47.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
+target conjecture: "./src/int/int-all47.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/int/int-all47.fof >> $(pwd)/out/tmp_output_vampire" status code: "139", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/int/int-all48.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/int/int-all48.fof >> $(pwd)/out/tmp_output_vampire" status code: "1", successful application (yes: 1, no: 0): 0
 target conjecture: "./src/int/int-all49.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/int/int-all49.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/int/int-all50.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/int/int-all50.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
@@ -65,4 +65,4 @@ target conjecture: "./src/int/int-all64.fof" apply prover command: "vampire --pr
 target conjecture: "./src/int/int-all65.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/int/int-all65.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/int/int-all66.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/int/int-all66.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
 target conjecture: "./src/int/int-all67.fof" apply prover command: "vampire --proof off --time_limit 60s ./src/int/int-all67.fof >> $(pwd)/out/tmp_output_vampire" status code: "0", successful application (yes: 1, no: 0): 1
-67 lemmas, 52 proved,  ratio: 77.61194029850746
+67 lemmas, 51 proved,  ratio: 76.11940298507463
